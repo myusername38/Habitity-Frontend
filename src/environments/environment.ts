@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyBWVJfATUHNQACNvOxEgIlREGtQLY8gwro',
+    authDomain: 'habitity.firebaseapp.com',
+    databaseURL: 'https://habitity.firebaseio.com',
+    projectId: 'habitity',
+    storageBucket: 'habitity.appspot.com',
+    messagingSenderId: '670779745623',
+    appId: '1:670779745623:web:c7fe6733d4f482a4268a12',
+    measurementId: 'G-7WJ635LSGC'
+  },
+  apiUrl: 'http://localhost:5000/bubblelocatorapi/us-central1/api'
 };
 
 /*
