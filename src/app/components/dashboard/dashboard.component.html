@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<div class="outter p-sm w-100" fxLayout="column" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="start center">
+  <div class="title-box">
+    <p class="title">Welcome back {{ userDoc?.username }}</p>
+  </div>
+  <div class="joined-groups w-100 mb-md" fxLayout="column" fxLayoutAlign="center center" *ngIf="userDoc">
+    <p class="subtitle mt-sm mb-sm">Your Groups</p>
+    <div class="group w-100 pt-xs pb-xs mt-xs" fxLayout="row" fxLayoutAlign="center center"  *ngFor="let group of userDoc.joinedGroups">
+      <p class="mb-0 ml-xs group">{{ group.name }}</p>
+      <button mat-raised-button class="ml-auto mr-xs button"(click)="loadGroup(group.reference)">
+        Load
+      </button>
+    </div>
+  </div>
+  <button mat-raised-button class="button create-group pt-xs pb-xs pr-sm pl-sm mb-sm"(click)="joinGroup()">Join Group</button>
+  <button mat-raised-button class="button create-group pt-xs pb-xs pr-sm pl-sm"(click)="createGroup()">Create Group</button>
+  <button (click)="logout()" class="logout mt-sm" mat-button>Logout</button>
+</div>

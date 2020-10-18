@@ -18,3 +18,12 @@
 button {
   font-family: $main-font;
 }
+
+:host ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+  stroke: white !important;
+}
+
+.placeholder {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,35 @@
+@import '../../../vars.scss';
+
+
+.outter {
+  color: white;
+  font-family: $main-font;
+  min-width: 100vw;
+  div {
+    max-width: 600px;
+  }
+  overflow-y: scroll;
+}
+
+.title {
+  font-size: 40px;
+  font-family: $main-font;
+  line-height: 1.2;
+  text-align: center;
+  color: #edecec;
+}
+
+.complete-task {
+  height: 40px;
+  width: 40px;
+  border-radius: 8px;
+  background-color: $primary;
+}
+
+.item {
+  border-radius: 4px;
+  text-align: center;
+  background-color: $primary;
+}
+
+

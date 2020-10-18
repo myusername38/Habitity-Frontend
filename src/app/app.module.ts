@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSliderModule } from '@angular/material/slider';
@@ -34,6 +35,8 @@ import { UserGroupsComponent } from './components/user-groups/user-groups.compon
 import { ConfirmationDialogComponent } from './dialogs/confirmation-dialog/confirmation-dialog.component';
 import { MakeHabitDialogComponent } from './dialogs/make-habit-dialog/make-habit-dialog.component';
 import { ShareLinkDialogComponent } from './dialogs/share-link-dialog/share-link-dialog.component';
+import { HabitInterfaceComponent } from './components/habit-interface/habit-interface.component';
+import { NameGroupDialogComponent } from './dialogs/name-group-dialog/name-group-dialog.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { ShareLinkDialogComponent } from './dialogs/share-link-dialog/share-link
     UserGroupsComponent,
     ConfirmationDialogComponent,
     MakeHabitDialogComponent,
-    ShareLinkDialogComponent
+    ShareLinkDialogComponent,
+    HabitInterfaceComponent,
+    NameGroupDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -65,6 +70,7 @@ import { ShareLinkDialogComponent } from './dialogs/share-link-dialog/share-link
     MatIconModule,
     MatProgressSpinnerModule,
     MatSliderModule,
+    MatRadioModule,
     MatSnackBarModule,
     MatMenuModule,
     MatToolbarModule,

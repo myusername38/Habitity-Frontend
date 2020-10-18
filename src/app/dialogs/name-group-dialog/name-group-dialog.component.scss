@@ -1,5 +1,10 @@
 @import '../../../vars.scss';
 
+.exit-icon {
+  margin-right: -25px;
+  margin-top: -25px;
+}
+
 .placeholder {
   width: 20px;
   height: 20px;
@@ -9,21 +14,6 @@
   stroke: white !important;
 }
 
-.dialog-title {
-  font-size: 44px !important;
-  text-align: center;
-}
-
-button {
-  width: 120px;
-}
-
-p {
-  color: white;
-  font-size: 24px;
-}
-
 .button {
   background-color: $primary;
 }
-

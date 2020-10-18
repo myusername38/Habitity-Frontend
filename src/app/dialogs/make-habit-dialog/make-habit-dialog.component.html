@@ -1,1 +1,15 @@
-<p>make-habit-dialog works!</p>
+<div class="confirmation p-xs" fxLayout="column" fxLayoutAlign="center center">
+    <div class="mb-xs">
+      <h1 class="dialog-title">Select Goal</h1>
+    </div>
+    <div class="mb-sm" fxLayout="column" fxLayout.gt-sm="row">
+      <mat-radio-group aria-label="Select an option" [(ngModel)]="selected" *ngFor="let option of options">
+        <mat-radio-button class="capitalize selector mr-xs" value="{{ option }}">{{ option }}</mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="mt-xs">
+      <button mat-button class="mr-xs p-xs button" (click)="submit()">
+        <p class="m-auto">Submit</p>
+      </button>
+    </div>
+  </div>

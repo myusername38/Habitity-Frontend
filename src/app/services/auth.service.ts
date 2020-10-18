@@ -14,10 +14,11 @@ export class AuthService {
   public _user = null;
   // tslint:disable-next-line: variable-name
   public _token = null;
+ // tslint:disable-next-line: variable-name
+  public _username = null;
 
   url = environment.apiUrl;
 
-  tokenSubject: BehaviorSubject<string> = new BehaviorSubject(null);
   userSubject: BehaviorSubject<any> = new BehaviorSubject(null);
   sendEmail = false;
 
@@ -28,14 +29,16 @@ export class AuthService {
     return this._token;
   }
 
+  get username() {
+    return this._username;
+  }
+
   constructor(public firebaseAuth: AngularFireAuth, private http: HttpClient) {
     this.firebaseAuth.user.subscribe(async user => {
       this._user = user;
       this.userSubject.next(user);
-      if (user) {
-        this._token = await user.getIdToken();
-        this.tokenSubject.next(this._token);
-      }
+      const idTokenResult = await user.getIdTokenResult();
+      this._username = idTokenResult.claims.username;
     });
   }
 
@@ -75,6 +78,6 @@ export class AuthService {
   }
 
   logout() {
-    return this.user.logout;
+    return this.firebaseAuth.signOut();
   }
 }

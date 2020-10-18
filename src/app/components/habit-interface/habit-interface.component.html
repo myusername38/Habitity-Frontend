@@ -1,0 +1,26 @@
+<div class="outter p-sm pt-md" fxLayout="column" fxLayoutAlign="start center" fxLayoutAlign.gt-sm="start center">
+  <div class="title mb-md">
+    {{ metadata.name }}
+  </div>
+  <div class="top-box">
+    <p>Weekly Goal Progress: {{ total }} / {{ goal }}</p>
+  </div>
+  <div class="user-buttons w-100" *ngIf="userTasks">
+    <div class="w-100 mb-sm" *ngFor="let task of userTasks" fxLayout="row" fxLayoutAlign="center center">
+      <p class="ml-xs mt-0 mb-0">{{ task.action}}</p>
+      <div class="task-button ml-auto mr-xs" fxLayout="row" fxLayoutAlign="end center">
+        <p class="mr-xs mt-0 mb-0">+{{ task.points }}</p>
+        <div (click)="addTask(task.action, task.points)" class="complete-task"></div>
+      </div>
+    </div>
+  </div>
+  <div class="history">
+    <div class="item mb-sm pl-sm pr-sm pt-xs pb-xs fade-in-fast" *ngFor="let task of completedTasks" fxLayout="row" fxLayoutAlign="center center">
+      <p class="mt-0 mb-0">{{ getData(task).user }}: {{ getData(task).task }} +{{ getData(task).points }}</p>
+    </div>
+  </div>
+  <button mat-raised-button (click)="share()" class="button create-group pt-xs pb-xs pr-sm pl-sm mb-sm">Share</button>
+  <button (click)="logout()" class="button" mat-button>Logout</button>
+</div>
+
+

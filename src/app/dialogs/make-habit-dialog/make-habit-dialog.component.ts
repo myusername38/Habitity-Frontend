@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-make-habit-dialog',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MakeHabitDialogComponent implements OnInit {
 
-  constructor() { }
+  options = ['Quit Smoking', 'Reduce Sugar', 'Reduce Alchohol'];
+  selected = 'Quit Smoking';
+
+  constructor(
+    public dialogRef: MatDialogRef<MakeHabitDialogComponent>,
+    @Inject(MAT_DIALOG_DATA) public data) {}
 
   ngOnInit(): void {
   }
 
+  async submit() { // quick fix
+    if (this.selected) {
+      this.dialogRef.close(this.selected);
+    }
+  }
+
+  goBack() {
+    this.dialogRef.close('Back');
+  }
+
 }
+
