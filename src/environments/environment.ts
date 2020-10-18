@@ -14,7 +14,7 @@ export const environment = {
     appId: '1:670779745623:web:c7fe6733d4f482a4268a12',
     measurementId: 'G-7WJ635LSGC'
   },
-  apiUrl: 'http://localhost:5000/bubblelocatorapi/us-central1/api'
+  apiUrl: 'https://us-central1-habitity.cloudfunctions.net/api',
 };
 
 /*

@@ -1,13 +1,13 @@
-<div class="outter w-100">
-  <div class="top-text">
-    <h1>Habitity</h1>
-    <p>Building Better Habbits Together</p>
+<div class="home w-100 p-sm" fxLayout="column" fxLayoutAlign="space-between center">
+  <div class="top-text mt-lg" fxLayout="column" fxLayoutAlign="center center">
+    <h1 class="mb-md">Habitity</h1>
+    <p>Building Better Habits Together</p>
   </div>
-  <div class="buttons">
-    <button mat-button>
+  <div class="buttons mb-lg" fxLayout="column">
+    <button mat-button (click)="login()" class="button mb-sm pt-xs pb-xs pr-sm pl-sm">
       Login
     </button>
-    <button mat-button>
+    <button mat-button (click)="navigate('register')" class="button pt-xs pb-xs pr-sm pl-sm">
       Register
     </button>
   </div>

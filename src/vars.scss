@@ -1,4 +1,5 @@
 /* For use in src/lib/core/theming/_palette.scss */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 $spacing-xs: 0.5rem;
 $spacing-sm: 1rem;
@@ -11,7 +12,7 @@ $border-width: 2px;
 $font-xs: 0.5rem;
 $font-sm: 1rem;
 $font-md: 1.25rem;
-$font-large: 2rem;
+$font-lg: 2rem;
 
 $small: 4px;
 $medium: 8px;
@@ -22,6 +23,9 @@ $background-color: #edecec;
 $primary: #90e39a;
 $secondary:#f37748;
 $accent: #f37748;
+
+$main-font: 'Inter', sans-serif;
+$inter: 'Inter', sans-serif;
 
 $md-primary: (
     50 : #f2fcf3,

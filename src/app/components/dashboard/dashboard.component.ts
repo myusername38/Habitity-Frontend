@@ -9,7 +9,18 @@ export class DashboardComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  user: string;
+  groups: [];
+
+  ngOnInit(): void {
+
   }
 
+  createGroup() {
+
+  }
+
+  joinGroup() {
+
+  }
 }

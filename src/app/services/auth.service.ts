@@ -56,9 +56,9 @@ export class AuthService {
     return this.firebaseAuth.signInWithEmailAndPassword(email, password);
   }
 
-  async register(email: string, password: string, username: string): Promise<any> {
+  async register(email: string, username: string, password: string): Promise<any> {
     this.sendEmail = true;
-    return this.http.post(`${ this.url }/signup`, { email, password }).toPromise();
+    return this.http.post(`${ this.url }/signup`, { email, username, password }).toPromise();
   }
 
   async updateCustomClaims() {

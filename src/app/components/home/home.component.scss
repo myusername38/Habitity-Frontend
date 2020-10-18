@@ -1,5 +1,27 @@
 @import '../../../vars.scss';
 
-.outter {
+.home {
   height: 100vh;
+  font-family: $main-font;
+}
+
+.top-text {
+  color: white;
+  h1 {
+    font-size: 48px;
+  }
+  p {
+    font-size: 30px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}
+
+.buttons {
+  .button {
+    font-family: $main-font;
+    color: white;
+    font-size: 24px;
+    background-color: $primary;
+  }
 }

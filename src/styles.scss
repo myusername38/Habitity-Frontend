@@ -20,13 +20,13 @@ $Habitity-frontend-warn: mat-palette($md-accent);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$Habitity-frontend-theme: mat-light-theme((
-  color: (
-    primary: $Habitity-frontend-primary,
-    accent: $Habitity-frontend-accent,
-    warn: $Habitity-frontend-warn,
-  )
-));
+
+$Habitity-frontend-theme: mat-light-theme(
+
+    $Habitity-frontend-primary,
+    $Habitity-frontend-accent,
+    $Habitity-frontend-warn,
+  );
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
